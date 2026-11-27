@@ -5,7 +5,18 @@ on:
       types:
         - opened
         - edited
-  
+      branches:
+        - main
+        - master
+        - 'dev-*'
+    push:
+      branches:
+        - main
+        - master
+        - dev-*
+      paths-ignore:
+        - '.github/workflows/*'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
